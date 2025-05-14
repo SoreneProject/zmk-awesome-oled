@@ -67,6 +67,10 @@ LV_IMG_DECLARE(vim);
 LV_IMG_DECLARE(vip_marcos);
 #define FIXED_IMAGE_2 &vip_marcos
 
+// CONFIG_NICE_OLED_TEST
+LV_IMG_DECLARE(test);
+#define FIXED_IMAGE_3 &test
+
 #if IS_ENABLED(CONFIG_NICE_OLED_GEM_ANIMATION_SMART_BATTERY)
 void draw_animation(lv_obj_t *canvas, struct zmk_widget_screen *widget) {}
 #else
@@ -116,6 +120,12 @@ void draw_animation(lv_obj_t *canvas, struct zmk_widget_screen *widget) {
     /* Additional fixed image example */
     art2 = lv_img_create(widget->obj);
     lv_img_set_src(art2, FIXED_IMAGE_1);
+#endif
+
+#if IS_ENABLED(CONFIG_NICE_OLED_TEST)
+    /* Additional fixed image example */
+    art2 = lv_img_create(widget->obj);
+    lv_img_set_src(art2, FIXED_IMAGE_3);
 #endif
 
 #if IS_ENABLED(CONFIG_NICE_OLED_VIP_MARCOS)

@@ -60,6 +60,10 @@ config NICE_OLED_POKEMON_ANIMATION_MS
 config NICE_OLED_VIM
     bool "Enable static vim on peripheral"
     default n
+    
+config NICE_OLED_TEST
+    bool "Enable static TEST on peripheral"
+    default y
 
 config NICE_OLED_BATTERY_STATUS
     bool "Enable battery status"
