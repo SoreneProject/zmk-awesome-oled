@@ -65,6 +65,10 @@ config NICE_OLED_BATTERY_STATUS
     bool "Enable battery status"
     default y
 
+config NICE_OLED_CONN_STATUS
+    bool "Enable connected usb/bluetooth status"
+    default y
+
 config NICE_OLED_VIP_MARCOS
 bool "Enable static vim_marcos on peripheral"
     default n
