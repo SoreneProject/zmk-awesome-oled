@@ -7,7 +7,7 @@ LV_IMG_DECLARE(bt_unbonded);
 LV_IMG_DECLARE(bt);
 LV_IMG_DECLARE(usb);
 
-#if !IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL) IS_ENABLED(CONFIG_NICE_OLED_CONN_STATUS)
+#if !IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL) || IS_ENABLED(CONFIG_NICE_OLED_CONN_STATUS)
 static void draw_usb_connected(lv_obj_t *canvas) {
   lv_draw_img_dsc_t img_dsc;
   lv_draw_img_dsc_init(&img_dsc);
