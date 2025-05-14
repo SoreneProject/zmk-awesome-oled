@@ -1,0 +1,4 @@
+name: "awesome_oled"
+build:
+  settings:
+    board_root: .
