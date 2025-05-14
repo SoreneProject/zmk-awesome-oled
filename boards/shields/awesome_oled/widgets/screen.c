@@ -83,8 +83,9 @@ static void set_battery_status(struct zmk_widget_screen *widget,
 #endif /* IS_ENABLED(CONFIG_USB_DEVICE_STACK) */
 
     widget->state.battery = state.level;
-
+#if IS_ENABLED(CONFIG_NICE_OLED_BATTERY_STATUS)
     draw_canvas(widget->obj, widget->cbuf, &widget->state);
+#endif
 }
 
 static void battery_status_update_cb(struct battery_status_state state) {

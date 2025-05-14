@@ -61,6 +61,10 @@ config NICE_OLED_VIM
     bool "Enable static vim on peripheral"
     default n
 
+config NICE_OLED_BATTERY_STATUS
+    bool "Enable battery status"
+    default y
+
 config NICE_OLED_VIP_MARCOS
 bool "Enable static vim_marcos on peripheral"
     default n
