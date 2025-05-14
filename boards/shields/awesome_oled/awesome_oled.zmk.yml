@@ -2,7 +2,7 @@ file_format: "1"
 id: awesome_oled
 name: awesome_oled
 type: shield
-url: https://github.com/mctechnology17/zmk-nice-oled
+url: https://github.com/SoreneProject/zmk-awesome-oled
 requires:
   - i2c_oled
 features:
