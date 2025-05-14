@@ -107,17 +107,18 @@ void draw_battery_status(lv_obj_t *canvas, const struct status_state *state) {
                    LV_TEXT_ALIGN_LEFT);
     lv_canvas_draw_text(canvas, 0, 19, 25, &label_left_dsc, "BAT");
     */
-
+#if IS_ENABLED(CONFIG_NICE_OLED_BATTERY_STATUS)
     if (state->charging) {
         draw_charging_level(canvas, state);
-#if IS_ENABLED(CONFIG_NICE_OLED_GEM_ANIMATION_SMART_BATTERY)
+    #if IS_ENABLED(CONFIG_NICE_OLED_GEM_ANIMATION_SMART_BATTERY)
         animation_smart_battery_on(canvas);
-#endif
+    #endif
 
     } else {
         draw_level(canvas, state);
-#if IS_ENABLED(CONFIG_NICE_OLED_GEM_ANIMATION_SMART_BATTERY)
+    #if IS_ENABLED(CONFIG_NICE_OLED_GEM_ANIMATION_SMART_BATTERY)
         animation_smart_battery_off(canvas);
-#endif
+    #endif
     }
+#endif
 }
