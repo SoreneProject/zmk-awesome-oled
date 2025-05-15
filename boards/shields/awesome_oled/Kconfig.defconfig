@@ -63,7 +63,7 @@ config NICE_OLED_VIM
     
 config NICE_OLED_TEST
     bool "Enable static TEST on peripheral"
-    default y
+    default n
 
 config NICE_OLED_BATTERY_STATUS
     bool "Enable battery status"
